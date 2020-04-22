@@ -105,6 +105,12 @@
         app:layout_constraintHeight_percent=".1"
         android:layout_height="0dp"/>
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/id_group_main"
+        android:layout_width="match_parent"
+        app:constraint_referenced_ids="id_klik_account_main,id_klik_home_main,id_t_profile_main,id_profile_main,id_t_home_main,id_home_main,id_view_main"
+        android:layout_height="match_parent"/>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"

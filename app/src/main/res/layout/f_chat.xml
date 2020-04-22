@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swiperefresh"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/id_rv_chat"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/background"
+            android:layout_marginBottom="@dimen/margin_normal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/id_pesan_chat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/id_pesan_chat"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/edittext"
+            android:background="@drawable/white_corner"
+            android:layout_margin="@dimen/margin_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/id_btn_kirim"
+            android:layout_width="0dp"/>
+
+        <Button
+            android:background="@mipmap/ic_kirim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent=".14"
+            android:layout_margin="@dimen/margin_normal"
+            app:layout_constraintStart_toEndOf="@id/id_pesan_chat"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/id_btn_kirim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

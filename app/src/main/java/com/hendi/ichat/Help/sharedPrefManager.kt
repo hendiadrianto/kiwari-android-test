@@ -11,6 +11,15 @@ class sharedPrefManager(context: Context) {
     val spSudahLogin: Boolean?
         get() = sp.getBoolean(SP_SUDAH_LOGIN, false)
 
+    val spChatFrom: String?
+        get() = sp.getString(SP_CHAT_FROM, "")
+
+    val spChatTo: String?
+        get() = sp.getString(SP_CHAT_TO, "")
+
+    val spUsername : String?
+        get() = sp.getString(SP_NAMA,"")
+
 
     init {
         sp = context.getSharedPreferences(SP_APP, Context.MODE_PRIVATE)
@@ -38,6 +47,9 @@ class sharedPrefManager(context: Context) {
         val SP_NAMA = "username"
 
         val SP_SUDAH_LOGIN = "spSudahLogin"
+
+        val SP_CHAT_FROM = "sp_chat_from"
+        val SP_CHAT_TO = "sp_chat_to"
     }
 
 

@@ -35,7 +35,7 @@ fun mProgress(dialog: Dialog) {
 
 fun mDate() : String {
     val date = Date()
-    val dateFormat = SimpleDateFormat("dd-MM-yyyy")
+    val dateFormat = SimpleDateFormat("dd-MM-yyyy hh:mm:ss")
     return dateFormat.format(date)
 }
 
