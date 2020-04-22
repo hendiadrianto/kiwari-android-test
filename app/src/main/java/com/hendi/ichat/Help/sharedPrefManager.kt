@@ -17,8 +17,14 @@ class sharedPrefManager(context: Context) {
     val spChatTo: String?
         get() = sp.getString(SP_CHAT_TO, "")
 
-    val spUsername : String?
-        get() = sp.getString(SP_NAMA,"")
+    val spImageFrom : String?
+        get() = sp.getString(SP_IMAGE_FROM,"")
+
+    val spImageTo : String?
+        get() = sp.getString(SP_IMAGE_TO,"")
+
+    val spBack : Boolean?
+        get() = sp.getBoolean(SP_BACK,false)
 
 
     init {
@@ -44,12 +50,15 @@ class sharedPrefManager(context: Context) {
     companion object {
         val SP_APP = "iChat"
 
-        val SP_NAMA = "username"
+        val SP_IMAGE_FROM = "spImageFrom"
+        val SP_IMAGE_TO = "spImageTo"
 
         val SP_SUDAH_LOGIN = "spSudahLogin"
 
         val SP_CHAT_FROM = "sp_chat_from"
         val SP_CHAT_TO = "sp_chat_to"
+
+        val SP_BACK = "spBack"
     }
 
 

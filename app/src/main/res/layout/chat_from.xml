@@ -5,46 +5,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp">
+    android:layout_marginBottom="@dimen/margin_normal">
 
     <TextView
-        android:id="@+id/textview_from_row"
+        android:id="@+id/id_text_from"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="This is my message that will wrap into multiple lines and keep going"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/chat_dari_orang"
         android:background="@drawable/white_corner"
-        android:paddingStart="20dp"
-        android:paddingEnd="16dp"
-        android:paddingTop="8dp"
-        android:textColor="@android:color/black"
-        android:paddingBottom="8dp"
+        android:padding="@dimen/margin_small"
+        style="@style/text"
         android:maxWidth="240dp"
-        app:layout_constraintStart_toEndOf="@+id/imageview_chat_from_row"
-        app:layout_constraintTop_toTopOf="@+id/imageview_chat_from_row"/>
+        app:layout_constraintStart_toEndOf="@+id/id_image_from"
+        app:layout_constraintTop_toTopOf="@+id/id_image_from"/>
 
     <TextView
-        android:id="@+id/from_msg_time"
+        android:id="@+id/id_tanggal_from"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:paddingEnd="20dp"
-        android:paddingStart="20dp"
-        android:text="16 Sep, 2:05 PM"
+        android:layout_marginTop="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_small"
+        android:paddingStart="@dimen/margin_small"
+        android:text="@string/_22_04_2020_11_50_21"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textview_from_row"
-        app:layout_constraintTop_toBottomOf="@+id/textview_from_row"/>
+        app:layout_constraintStart_toStartOf="@+id/id_text_from"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_from"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageview_chat_from_row"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/id_image_from"
+        android:layout_width="@dimen/layout_very_large"
+        android:layout_height="@dimen/layout_very_large"
         android:src="@drawable/ic_photo"
         app:civ_border_color="@android:color/black"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 

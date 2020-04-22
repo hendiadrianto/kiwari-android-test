@@ -1,49 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/swiperefresh"
-    android:background="@color/background"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/id_rv_chat"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@color/background"
-            android:layout_marginBottom="@dimen/margin_normal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/id_pesan_chat"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
 
-        <EditText
-            android:id="@+id/id_pesan_chat"
-            app:layout_constraintStart_toStartOf="parent"
-            style="@style/edittext"
-            android:background="@drawable/white_corner"
-            android:layout_margin="@dimen/margin_normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/id_btn_kirim"
-            android:layout_width="0dp"/>
-
-        <Button
-            android:background="@mipmap/ic_kirim"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintWidth_percent=".14"
-            android:layout_margin="@dimen/margin_normal"
-            app:layout_constraintStart_toEndOf="@id/id_pesan_chat"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/id_btn_kirim"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
+            <Button
+                android:id="@+id/id_btn_kirim"
+                android:layout_width="65dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:background="@mipmap/ic_kirim"
+                app:layout_constraintBottom_toBottomOf="@id/id_pesan_chat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_min="@dimen/layout_very_large"
+                app:layout_constraintStart_toEndOf="@id/id_pesan_chat"
+                app:layout_constraintTop_toTopOf="@id/id_pesan_chat" />
+
+            <EditText
+                android:id="@+id/id_pesan_chat"
+                style="@style/edittext"
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="@drawable/white_corner"
+                android:paddingStart="@dimen/margin_normal"
+                android:paddingEnd="@dimen/margin_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/id_btn_kirim"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/id_rv_chat"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:background="@color/background"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/id_pesan_chat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/id_toolbar_chat"/>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            <androidx.appcompat.widget.Toolbar
+                app:titleTextColor="@android:color/white"
+                android:background="?attr/colorPrimaryDark"
+                android:id="@+id/id_toolbar_chat"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

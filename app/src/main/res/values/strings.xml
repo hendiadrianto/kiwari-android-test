@@ -5,4 +5,11 @@
     <string name="sign_in">Sign in</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="chat_dari_orang">Chat dari orang</string>
+    <string name="_22_04_2020_11_50_21">22-04-2020 11:50:21</string>
+    <string name="chat_dari_sendiri">chat dari sendiri</string>
+
+    <string name="grey">#636363</string>
+    <string name="blue">#1c8ef9</string>
+    <string name="janjrit_singh">Janjrit Singh</string>
 </resources>
