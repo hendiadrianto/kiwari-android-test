@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/id_fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/id_view_main"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_toolbar" />
+
+    <TextView
+        android:id="@+id/id_toolbar"
+        style="@style/text.title"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/margin_small"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/ichat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/id_view_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="@dimen/margin_small"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent=".1" />
+
+    <ImageView
+        android:id="@+id/id_home_main"
+        android:elevation="@dimen/margin_small"
+        android:layout_width="@dimen/layout_normal"
+        android:layout_height="@dimen/layout_normal"
+        android:background="@drawable/ic_home"
+        app:layout_constraintBottom_toTopOf="@id/id_t_home_main"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/id_view_main" />
+
+    <TextView
+        style="@style/text"
+        android:textColor="@color/colorPrimary"
+        android:text="Home"
+        android:elevation="@dimen/margin_small"
+        android:id="@+id/id_t_home_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_home_main"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:id="@+id/id_profile_main"
+        android:elevation="@dimen/margin_small"
+        android:layout_width="@dimen/layout_normal"
+        android:layout_height="@dimen/layout_normal"
+        android:background="@drawable/ic_account_grey"
+        app:layout_constraintBottom_toTopOf="@id/id_t_profile_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toTopOf="@id/id_view_main" />
+
+
+    <TextView
+        style="@style/text"
+        android:textColor="@color/gray"
+        android:text="My Account"
+        android:elevation="@dimen/margin_small"
+        android:id="@+id/id_t_profile_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_profile_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/id_klik_home_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        app:layout_constraintHeight_percent=".1"
+        android:layout_height="0dp"/>
+
+    <View
+        android:id="@+id/id_klik_account_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        android:layout_width="0dp"
+        app:layout_constraintHeight_percent=".1"
+        android:layout_height="0dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

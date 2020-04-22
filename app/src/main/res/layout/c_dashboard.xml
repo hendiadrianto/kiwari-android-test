@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/margin_small"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04136253" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <ImageView
+            android:id="@+id/id_image_cd"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            app:layout_constraintEnd_toEndOf="@id/guideline6"
+            android:layout_width="0dp"
+            android:layout_height="70dp"/>
+
+        <TextView
+            android:id="@+id/id_title_cd"
+            style="@style/text"
+            android:text="Title "
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toTopOf="@id/id_isi_cd"
+            android:textSize="@dimen/font_medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline6"
+            app:layout_constraintEnd_toEndOf="@id/guideline7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/id_isi_cd"
+            style="@style/text"
+            android:gravity="center_vertical"
+            android:text="isi pesan"
+            android:maxLines="1"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="@id/id_image_cd"
+            app:layout_constraintTop_toBottomOf="@id/id_title_cd"
+            app:layout_constraintStart_toStartOf="@id/guideline6"
+            app:layout_constraintEnd_toEndOf="@id/guideline7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <View
+            android:layout_margin="@dimen/margin_small"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/id_image_cd"
+            app:layout_constraintEnd_toEndOf="@id/guideline7"
+            app:layout_constraintStart_toStartOf="@id/guideline5"
+            android:layout_width="0dp"
+            android:layout_height="1dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

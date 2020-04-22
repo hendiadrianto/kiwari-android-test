@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "805747267875",
+    "firebase_url": "https://ichat-94585.firebaseio.com",
+    "project_id": "ichat-94585",
+    "storage_bucket": "ichat-94585.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805747267875:android:96c913a0ee46ab92aa5496",
+        "android_client_info": {
+          "package_name": "com.hendi.ichat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805747267875-lvmkqr919hvg22tctlr18p2if7rcjlrj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hendi.ichat",
+            "certificate_hash": "a410d5f38d262958e430a8301e20f275238edd2a"
+          }
+        },
+        {
+          "client_id": "805747267875-c2v28tmv5q141tl4ck18lgbd8g48svi3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAYBZZL3jILTu1jen_-_RfOI0DwRuN1eU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "805747267875-c2v28tmv5q141tl4ck18lgbd8g48svi3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
