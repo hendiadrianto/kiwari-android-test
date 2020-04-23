@@ -13,7 +13,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <Button
                 android:id="@+id/id_btn_kirim"
                 android:layout_width="65dp"
@@ -53,6 +52,7 @@
 
             <androidx.appcompat.widget.Toolbar
                 app:titleTextColor="@android:color/white"
+                android:elevation="@dimen/margin_small"
                 android:background="?attr/colorPrimaryDark"
                 android:id="@+id/id_toolbar_chat"
                 app:layout_constraintTop_toTopOf="parent"
