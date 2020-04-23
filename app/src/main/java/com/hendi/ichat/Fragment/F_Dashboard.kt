@@ -55,7 +55,7 @@ class F_Dashboard : Fragment() {
 
         if (mNetworkAvailable(mContext)) fecthUser() else mToast(mContext,"Aktifkan koneksi internet terlebih dahulu !")
 
-        v.id_swipe_dashboard.setOnRefreshListener(object : SwipeRefreshLayout.OnRefreshListener{
+        v.id_swipe_dashboard.setOnRefreshListener(object : SwipeRefreshLayout.OnRefreshListener {
             override fun onRefresh() {
                 if (mNetworkAvailable(mContext)) {
                     fecthUser()

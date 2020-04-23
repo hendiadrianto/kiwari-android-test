@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.bumptech.glide.Glide
 import com.google.firebase.database.*
 import com.hendi.ichat.Help.Chat
@@ -26,6 +27,7 @@ import kotlinx.android.synthetic.main.chat_from.view.*
 import kotlinx.android.synthetic.main.chat_to.view.*
 import kotlinx.android.synthetic.main.d_account.*
 import kotlinx.android.synthetic.main.f_chat.view.*
+import kotlinx.android.synthetic.main.f_dashboard.view.*
 
 class F_Chat : Fragment() {
 
@@ -79,6 +81,17 @@ class F_Chat : Fragment() {
                 v.id_pesan_chat.setError("Tidak boleh kosong !")
             }
         }
+
+        v.swiperefresh.setOnRefreshListener(object : SwipeRefreshLayout.OnRefreshListener{
+            override fun onRefresh() {
+                if (mNetworkAvailable(mContext)) {
+                    readChat()
+                } else {
+                    v.swiperefresh.isRefreshing = false
+                    mToast(mContext, "Aktifkan koneksi internet terlebih dahulu !")
+                }
+            }
+        })
 
         readChat()
 
@@ -137,6 +150,7 @@ class F_Chat : Fragment() {
             }
 
         })
+
     }
 
     private fun sendChat() {
